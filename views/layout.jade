@@ -1,6 +1,20 @@
 !!!
-html
+html(ng-app='rpgr')
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+    link(rel='stylesheet', href='/css/bootstrap/bootstrap.css')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    .navbar.navbar-fixed-top.navbar-inverse
+        .navbar-inner
+            .container-fluid
+                a.brand(href='#') RPGr
+    #main-content.container!= body
+    script(src='/js/lib/jquery/jquery.js')
+    script(src='/js/lib/bootstrap.js')
+    script(src='/js/lib/angular/angular.js')
+    script(src='/js/lib/angular-resource/angular-resource.js')
+    script(src='/js/app.js')
+    script(src='/js/services/system.js')
+    script(src='/js/controllers/systemList.js')
+    script(src='/js/controllers/systemDetail.js')

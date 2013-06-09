@@ -1,0 +1,13 @@
+body {
+    padding-top: 41px;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+.inline-btn-link {
+    border: 0;
+    display: inline;
+    padding: 0;
+}

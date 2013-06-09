@@ -1,0 +1,7 @@
+h2 Systems
+.container-fluid
+    table.table.table-bordered
+        tr(ng-repeat='system in systems')
+            td 
+                a(href='#/systems/{{system._id}}') {{system.name}}
+    button.btn Add system
