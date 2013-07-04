@@ -1,7 +1,10 @@
 h2 Systems
 .container-fluid
-    table.table.table-bordered
+    table.table.table-bordered.systems-table
         tr(ng-repeat='system in systems')
             td 
                 a(href='#/systems/{{system._id}}') {{system.name}}
-    button.btn Add system
+                button.btn.btn-danger.pull-right(ng-click='destroySystem(system, $index)') Delete
+    form.form-inline(ng-submit='addSystem()')
+        input(type='text', placeholder='System name', ng-model='newSystem')
+        button(type='submit').btn Add

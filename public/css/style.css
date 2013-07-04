@@ -11,3 +11,7 @@ body {
     display: inline;
     padding: 0;
 }
+
+.systems-table td {
+    vertical-align: middle;
+}
