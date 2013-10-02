@@ -34,8 +34,8 @@ app.configure('production', function(){
 app.get('/', routes.index);
 app.get('/views/partials/:name', routes.getPartial);
 app.get('/api/systems/:systemId', apiRoutes.getSystem);
-app.delete('/api/systems/:systemId', apiRoutes.deleteSystem);
 app.get('/api/systems', apiRoutes.getSystems);
+app.delete('/api/systems/:systemId', apiRoutes.deleteSystem);
 app.post('/api/systems', apiRoutes.createSystem);
 app.put('/api/systems', apiRoutes.updateSystem);
 
