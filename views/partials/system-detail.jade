@@ -3,10 +3,11 @@ div All sorts of exciting details.
 
 h3 Sheets
 table.table.table-bordered.systems-table
-    tr(ng-repeat='sheet in system.sheets')
+    tr(ng-repeat='sheet in sheets')
         td 
-            a(href='#/sheets/{{sheet._id}}') {{sheet.name}}
+            a(href='#/sheets/{{sheet.id}}') {{sheet.name}}
             button.btn.btn-danger.pull-right(ng-click='destroySheet(sheet, $index)') Delete
+
 form.form-inline(ng-submit='addSheet()')
     input(type='text', placeholder='Sheet name', ng-model='newSheet')
     button(type='submit').btn Add

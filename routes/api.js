@@ -35,6 +35,8 @@ function createCrud(entityName) {
     exports['create' + pascalEntityName] = function (req, res) {
         r.connect(connConfig, function (err, conn) {
             r.db('rpgmaker').table(entityName + 's').insert(req.body).run(conn, function (err, result) {
+                if (err)
+                    throw new Error(err);
                 res.json({ id: result.generated_keys[0] }, 201);
             });
         });

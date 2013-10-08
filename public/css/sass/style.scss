@@ -1,0 +1,31 @@
+$default-font-color: #222;
+$default-spacing-size: 12px;
+
+body {
+	color: $default-font-color;
+    font-family: helvetica, arial, sans-serif;
+	margin: 0;
+    padding: 0;
+}
+
+a {
+	color: $default-font-color;
+}
+
+nav {
+	padding: $default-spacing-size;
+	background: #333435;
+}
+
+nav a {
+	color: #eee;
+	text-decoration: none;
+}
+
+#main-content {
+	margin: $default-spacing-size;
+}
+
+.systems-table td {
+    vertical-align: middle;
+}

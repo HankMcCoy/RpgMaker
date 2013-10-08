@@ -1,6 +1,6 @@
 RPGr.controller('systemList', function ($scope, System) {
-    System.query(function (data) {
-        $scope.systems = data.systems;
+    System.query(function (systems) {
+        $scope.systems = systems;
     });
 
     $scope.addSystem = function () {
@@ -15,7 +15,7 @@ RPGr.controller('systemList', function ($scope, System) {
     }
 
     $scope.destroySystem = function (system, idx) {
-        System.delete({ systemId: system.id });
+        System.delete(system.id);
         $scope.systems.splice(idx, 1);
     }
 });

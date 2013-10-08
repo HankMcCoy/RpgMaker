@@ -1,4 +1,4 @@
-var RPGr = angular.module('rpgr', ['rpgr.services'])
+var RPGr = angular.module('rpgr', [])
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/systems', {
@@ -8,6 +8,10 @@ var RPGr = angular.module('rpgr', ['rpgr.services'])
             .when('/systems/:systemId', {
                 templateUrl: 'views/partials/system-detail',
                 controller: 'systemDetail'
+            })
+            .when('/sheets/:sheetId', {
+                templateUrl: 'views/partials/sheet-detail',
+                controller: 'sheetDetail'
             })
             .otherwise({ redirectTo: '/systems' });
     }]);
