@@ -1,5 +1,6 @@
 $default-font-color: #222;
 $default-spacing-size: 12px;
+$nav-height: 44px;
 
 body {
 	color: $default-font-color;
@@ -13,8 +14,10 @@ a {
 }
 
 nav {
-	padding: $default-spacing-size;
+	height: $nav-height;
+	line-height: $nav-height;
 	background: #333435;
+  padding-left: $default-spacing-size;
 }
 
 nav a {
@@ -23,9 +26,61 @@ nav a {
 }
 
 #main-content {
-	margin: $default-spacing-size;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.systems-table td {
+.system-detail {
+  padding: 0 $default-spacing-size;
+
+  .concepts-list-container, .entities-list-container, .sheets-list-container {
+    width: 33%;
+    float: left;
+  }
+}
+
+.systems-table {
+  width: 100%;
+
+  td {
     vertical-align: middle;
+  }
+
+  .delete-sheet {
+    float: right;
+  }
+}
+
+.sheet-view {
+	position: absolute;
+	top: $nav-height;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.sheet-toolbox {
+	background: #fefefe;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 200px;
+	padding: $default-spacing-size;
+	border-right: 1px solid #f3f3f3;
+}
+
+.sheet-container {
+	margin-left: 224px;
+	padding: 24px 0;
+}
+
+.sheet {
+	width: 700px;
+	margin: 0 auto;
+	background: #fefefe;
+	height: 900px;
+	-webkit-box-shadow: 1px 1px 30px #ddd;
+	border: 1px solid #ddd;
+	padding: 24px;
 }

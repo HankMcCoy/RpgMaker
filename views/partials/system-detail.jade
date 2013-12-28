@@ -1,13 +1,23 @@
-h2 {{system.name}}
-div All sorts of exciting details. 
+section.system-detail
+  h2 {{system.name}}
+  p All sorts of exciting details. 
 
-h3 Sheets
-table.table.table-bordered.systems-table
-    tr(ng-repeat='sheet in sheets')
+  section.concepts-list-container
+    h3 Concepts
+    p Work in progress
+
+  section.entities-list-container
+    h3 Entities
+    p Work in progress
+
+  section.sheets-list-container
+    h3 Sheets
+    table.table.table-bordered.systems-table
+      tr(ng-repeat='sheet in sheets')
         td 
-            a(href='#/sheets/{{sheet.id}}') {{sheet.name}}
-            button.btn.btn-danger.pull-right(ng-click='destroySheet(sheet, $index)') Delete
+          a(href='#/sheets/{{sheet.id}}') {{sheet.name}}
+          button.delete-sheet(ng-click='destroySheet(sheet, $index)') Delete
 
-form.form-inline(ng-submit='addSheet()')
-    input(type='text', placeholder='Sheet name', ng-model='newSheet')
-    button(type='submit').btn Add
+    form.form-inline(ng-submit='addSheet()')
+      input(type='text', placeholder='Sheet name', ng-model='newSheet')
+      button(type='submit').btn Add
