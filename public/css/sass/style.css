@@ -1,0 +1,72 @@
+body {
+  color: #222222;
+  font-family: helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #222222; }
+
+nav {
+  height: 44px;
+  line-height: 44px;
+  background: #333435;
+  padding-left: 12px; }
+
+nav a {
+  color: #eee;
+  text-decoration: none; }
+
+#main-content {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.system-detail {
+  padding: 0 12px; }
+  .system-detail .concepts-list-container, .system-detail .entities-list-container, .system-detail .sheets-list-container {
+    width: 33%;
+    float: left; }
+
+.systems-table {
+  width: 100%; }
+  .systems-table td {
+    vertical-align: middle; }
+  .systems-table .delete-sheet {
+    float: right; }
+
+.sheet-toolbox {
+  background: #fefefe;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  padding: 12px;
+  border-right: 1px solid #f3f3f3; }
+
+.drag-box {
+  background: #f0f;
+  width: 80px;
+  height: 80px; }
+
+.sheet-text-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 8px;
+  width: 100px;
+  height: 20px;
+  line-height: 20px; }
+
+.sheet-container {
+  margin-left: 224px;
+  padding: 24px 0; }
+
+.sheet {
+  width: 700px;
+  margin: 0 auto;
+  background: #fefefe;
+  height: 900px;
+  -webkit-box-shadow: 1px 1px 30px #ddd;
+  border: 1px solid #ddd;
+  padding: 24px; }

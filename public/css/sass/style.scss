@@ -4,9 +4,10 @@ $nav-height: 44px;
 
 body {
 	color: $default-font-color;
-    font-family: helvetica, arial, sans-serif;
+	background-color: #f0f0f0;
+	font-family: helvetica, arial, sans-serif;
 	margin: 0;
-    padding: 0;
+	padding: 0;
 }
 
 a {
@@ -17,7 +18,7 @@ nav {
 	height: $nav-height;
 	line-height: $nav-height;
 	background: #333435;
-  padding-left: $default-spacing-size;
+	padding-left: $default-spacing-size;
 }
 
 nav a {
@@ -26,48 +27,56 @@ nav a {
 }
 
 #main-content {
-  max-width: 1100px;
-  margin: 0 auto;
+	max-width: 1100px;
+	margin: 0 auto;
 }
 
 .system-detail {
-  padding: 0 $default-spacing-size;
+	padding: 0 $default-spacing-size;
 
-  .concepts-list-container, .entities-list-container, .sheets-list-container {
-    width: 33%;
-    float: left;
-  }
+	.concepts-list-container, .entities-list-container, .sheets-list-container {
+		width: 33%;
+		float: left;
+	}
 }
 
 .systems-table {
-  width: 100%;
+	width: 100%;
 
-  td {
-    vertical-align: middle;
-  }
+	td {
+		vertical-align: middle;
+	}
 
-  .delete-sheet {
-    float: right;
-  }
-}
-
-.sheet-view {
-	position: absolute;
-	top: $nav-height;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	.delete-sheet {
+		float: right;
+	}
 }
 
 .sheet-toolbox {
-	background: #fefefe;
+	background: #fff;
 	position: absolute;
-	top: 0;
+	top: $nav-height;
 	left: 0;
 	bottom: 0;
 	width: 200px;
 	padding: $default-spacing-size;
-	border-right: 1px solid #f3f3f3;
+	border-right: 2px solid #eee;
+}
+
+.drag-box {
+	background: #f0f;
+	width: 80px;
+	height: 80px;
+}
+
+.sheet-text-box {
+	background: #fff;
+	border: 1px solid #bbb;
+	border-radius: 4px;
+	padding: 4px 8px;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
 }
 
 .sheet-container {

@@ -1,0 +1,16 @@
+<section class="list-container">
+  <h3>{{title}}</h3>
+  <table>
+    <tr ng-repeat="item in items">
+      <td>
+        <a href='{{getItemHref(item)}}'>{{item.name}}</a>
+        <button class="delete-item" ng-click="destroyItem(sheet, $index)"> Delete</button>
+      </td>
+    </tr>
+  </table>
+
+  <form class="form-inline" ng-submit="addItem()">
+    <input type="text" placeholder="{{itemType}} name" ng-model="newItem" />
+    <button type="submit">Add</button>
+  </form>
+</section>

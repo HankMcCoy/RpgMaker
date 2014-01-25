@@ -1,6 +1,7 @@
 div.sheet-view
-	section.sheet-toolbox
+	section.sheet-toolbox(data-dragn-container, data-dragn-draggable)
 		h3 Toolbox
-		span.
+		div.sheet-text-box(data-dragn-draggable)
+		div.sheet-number-box(data-dragn-draggable)
 	div.sheet-container
-		section.sheet {{sheet.name}}
+		section.sheet(data-dragn-container) {{sheet.name}}

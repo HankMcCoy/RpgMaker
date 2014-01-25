@@ -32,6 +32,7 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
+app.get('/sheetEditor', routes.sheetEditor);
 app.get('/views/partials/:name', routes.getPartial);
 
 app.get('/api/systems/:systemId', apiRoutes.getSystem);
